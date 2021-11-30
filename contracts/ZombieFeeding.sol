@@ -31,7 +31,7 @@ contract ZombieFeeding is ZombieFactory {
   }
 
   function _isReady(Zombie storage _zombie) internal view returns (bool) {
-    return (_zombie.readyTime <= now);
+    return (_zombie.readyTime <= block.timestamp);
   }
 
   function feedAndMultiply(
