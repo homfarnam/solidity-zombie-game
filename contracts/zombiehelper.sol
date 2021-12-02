@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity >=0.5.0 <0.6.0;
+pragma solidity >=0.4.0;
 
 import './zombiefeeding.sol';
 
@@ -23,7 +23,7 @@ contract ZombieHelper is ZombieFeeding {
 
   function levelUp(uint256 _zombieId) external payable {
     require(msg.value == levelUpFee);
-    zombies[_zombieId].level++;
+    zombies[_zombieId].level = zombies[_zombieId].level.add(1);
   }
 
   function changeName(uint256 _zombieId, string calldata _newName)
