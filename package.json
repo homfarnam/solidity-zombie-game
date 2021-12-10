@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@openzeppelin/contracts": "^4.4.0",
-    "solc": "^0.8.10",
+    "solc": "^0.8.0",
     "truffle": "^5.4.22",
     "truffle-hdwallet-provider": "^1.0.17"
   }
