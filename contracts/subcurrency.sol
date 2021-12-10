@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.5.0 <0.6.0;
+pragma solidity ^0.8.0;
 
-contract Subcurrency {
+abstract contract Subcurrency {
   address public minter;
 
   mapping(address => uint256) public balances;
@@ -15,7 +15,7 @@ contract Subcurrency {
 
   event Sent(address from, address to, uint256 amount);
 
-  constructor() public {
+  constructor() {
     minter = msg.sender;
   }
 

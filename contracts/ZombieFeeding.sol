@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity >=0.5.0 <0.6.0;
+pragma solidity ^0.8.0;
 import './HelloBlockchain.sol';
 
-contract KittyInterface {
+abstract contract KittyInterface {
   function getKitty(uint256 _id)
     external
     view
+    virtual
     returns (
       bool isGestating,
       bool isReady,
